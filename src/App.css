@@ -1,27 +1,13 @@
-img.main {
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.loginbox {
-  width: 320px;
-  height: 1100px;
+.companybox {
+  width: 640px;
+  height: 800px;
   background: #0d0f10;
   opacity: 0.85;
   background-size: cover;
   color: #fff;
-  top: 110%;
+  top: 80%;
   left: 50%;
-  margin-bottom: 50%;
+  margin-bottom: 10%;
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
@@ -44,16 +30,16 @@ h1 {
   font-size: 22px;
 }
 
-.loginbox p[id="age"] {
+.companybox p[id="age"] {
   float: left;
   text-align: left;
 }
-.loginbox p {
+.companybox p {
   margin: 0;
   padding: 0;
   font-weight: bold;
 }
-.loginbox button {
+.companybox button {
   background-color: #4caf50;
   border: none;
   color: white;
@@ -64,8 +50,30 @@ h1 {
   font-size: 16px;
   margin-left: 30%;
 }
-.button1 {
-  border-radius: 48px;
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: ivory;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  width: 250px;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /*.loginbox input[type="radio"] {
     inline-size: 4rem;
@@ -77,12 +85,12 @@ h1 {
     float: left;
     width: 50px;
   }*/
-.loginbox input {
+.companybox input {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.loginbox input[type="text"],
+.companybox input[type="text"],
 input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
@@ -92,7 +100,7 @@ input[type="password"] {
   color: #fff;
   font-size: 16px;
 }
-.loginbox input[type="submit"] {
+.companybox input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
@@ -101,18 +109,22 @@ input[type="password"] {
   font-size: 18px;
   border-radius: 20px;
 }
-.loginbox input[type="submit"]:hover {
+.companybox input[type="submit"]:hover {
   cursor: pointer;
   background: #ffc107;
   color: #000;
 }
-.loginbox a {
+.companybox a {
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
   color: darkgrey;
 }
 
-.loginbox a:hover {
+.companybox a:hover {
   color: #ffc107;
+}
+textarea {
+  width: 520px;
+  height: 150px;
 }

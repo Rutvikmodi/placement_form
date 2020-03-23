@@ -3,101 +3,121 @@ import Navbar from "./navbar";
 import "./App.css";
 import userlogo from "./user.png";
 import { RadioGroup, Radio } from "react-radio-group";
+import { Container, Row, Col } from "reactstrap";
 import background from "./asfalt-dark.png";
-
-var sectionStyle = {
-  backgroundImage: "url(" + background + ")"
-};
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button } from "react-bootstrap";
 
 function App() {
   return (
     <React.Fragment>
-      <img src={background} className="main" />
       <div className="main">
         <Navbar></Navbar>
-        <title>Add User</title>
+        <title>Add Company</title>
         <link rel="stylesheet" type="text/css" href="App.css" />
-        <div className="loginbox">
-          <img src={userlogo} className="user" />
-          <h1>Add User</h1>
+        <div className="companybox">
+          {/*  ADD ANY LOGO ON THE TOP OF THE BOX*/}
+          <h1>Add Company</h1>
           <form>
-            <p>User Name :</p>
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter Username"
-              required
-            />
-            <p>Password :</p>
-            <input
-              pattern=".{8,}"
-              type="password"
-              placeholder="Enter Password"
-              required
-            />
-            <p>Email ID :</p>
-            <br></br>
-            <input
-              type="email"
-              pattern="{/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/}"
-              name="emailid"
-              placeholder="Enter EmailID"
-              required
-            />
-            {/* Guys, Input pattern for first name and last name is /^[A-Za-z]+$/ and it can only be verified when form is submitted, DURING BACKEND*/}
-            <p>First Name :</p>
-            <input
-              type="text"
-              name="fname"
-              placeholder="Enter First Name"
-              required
-            />
-            <p>Last Name :</p>
-            <input
-              type="text"
-              name="lname"
-              placeholder="Enter Last Name"
-              required
-            />
             <div>
-              <p>Gender :</p>
-              <br></br>
-              <RadioGroup
-                name="Gender"
-                style={{ display: "flex", width: "80%" }}
-              >
-                <Radio value="male" />
-                Male
-                <Radio value="female" />
-                Female
-              </RadioGroup>
+              <div className="container-fluid">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <p>Name of the Company :</p>
+                      <input
+                        type="text"
+                        name="compid"
+                        placeholder="Enter Company name"
+                        required
+                      />
+                    </div>
+                    <div className="col-lg-6">
+                      <p>Offer Type :</p>
+                      <input
+                        type="text"
+                        name="links"
+                        placeholder="Enter Offer type"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p id="age">Age :</p>
-            <input
-              type="text"
-              name="age"
-              placeholder="Enter your Age for eg: 20 years"
-              required
-            />
-            <p>Address :</p>
-            <textarea
-              type="textarea"
-              rows="4"
-              cols="30"
-              name="address"
-              placeholder="Enter Address"
-              required
-            />
-            <p>College ID :</p>
-            <input
-              type="text"
-              name="cid"
-              placeholder="Enter college ID"
-              required
-            />
-            <p>Link for LinkedIn :</p>
-            <input type="text" name="links" placeholder="Enter link" required />
-            <button class="button button1">Add User</button>
+            <div>
+              <div className="container-fluid">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6">
+                      <p>Category :</p>
+                      <input
+                        type="text"
+                        name="category"
+                        placeholder="Enter Category"
+                        required
+                      />
+                    </div>
+                    <div className="col-lg-6">
+                      <p>Open For :</p>
+                      <input
+                        type="text"
+                        name="openfor"
+                        placeholder="Open for"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <br></br>
+              <div className="container-fluid">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <p>Registration Starts :</p>
+                      <br></br>
+                      <input type="date" name="regstart" required />
+                    </div>
+                    <div className="col-lg-4">
+                      <p>Registration Ends :</p>
+                      <br></br>
+                      <input type="date" name="regend" required />
+                    </div>
+                    <div className="col-lg-4">
+                      <p>OnCampus Date :</p>
+                      <br></br>
+                      <input type="date" name="oncampusdate" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <div>
+              <div className="container-fluid">
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col-lg-12">
+                      <p>Posting Locations :</p>
+                      <br></br>
+                      <textarea
+                        rows="4"
+                        cols="55"
+                        name="posting_location"
+                        placeholder="Enter Posting Locations"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br></br>
+            <br></br>
+            <button class="button button1">Add Company</button>
           </form>
         </div>
       </div>
